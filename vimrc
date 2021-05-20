@@ -42,19 +42,29 @@ let g:airline_theme = 'gruvbox'
 syntax on
 set number
 set cursorline
+set foldmethod=marker
 
 set autoindent
 set smartindent
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set expandtab
 
 set mouse=a
 " Fix mouse on alacritty
-set ttymouse=xterm2
+set ttymouse=sgr
 
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
+nnoremap <ESC><ESC> :nohlsearch<CR>
 
 set autoread
+set backspace=indent,eol,start
+set encoding=utf-8
+set pastetoggle=<F2>
+
+autocmd FileType Makefile set noexpandtab
+autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
