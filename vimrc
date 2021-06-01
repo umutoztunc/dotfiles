@@ -78,7 +78,7 @@ autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
-let leader="\<Space>"
+let mapleader="\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
