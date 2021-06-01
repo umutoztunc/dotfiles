@@ -10,7 +10,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 " }}}
 
-" Smali syntax highlight {{{
+" Syntax highlight {{{
+Plug 'sheerun/vim-polyglot'
+" Smali syntax highlight
 Plug 'kelwin/vim-smali'
 " }}}
 
@@ -39,10 +41,16 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'gruvbox'
 " }}}
 
+" vim-polyglot {{{
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+" }}}
+
 syntax on
 set number
 set cursorline
 set foldmethod=marker
+set wildmenu
 
 set autoindent
 set smartindent
@@ -59,7 +67,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <silent> <ESC><ESC> :nohlsearch<CR>
 
 set autoread
 set backspace=indent,eol,start
@@ -68,3 +76,11 @@ set pastetoggle=<F2>
 
 autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
+
+let leader="\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>x :x<CR>
+" Reindent all code, while preserving cursor location
+nnoremap <Leader>= mqHmwgg=G`wzt`q
