@@ -1,0 +1,30 @@
+- shell:
+  -
+    command: git submodule update --init --recursive
+    description: Installing submodules
+    stdout: true
+
+- clean: ['~', '~/.config']
+
+- link:
+# git
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+# vim
+    ~/.vimrc: vimrc
+    ~/.vim/autoload/plug.vim:
+      create: true
+      path: modules/vim-plug/plug.vim
+# zsh
+    ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
+# gdb
+    ~/.gdbinit: gdbinit
+# alacritty
+    ~/.alacritty.yml: alacritty.yml
+# picom
+    ~/.config/picom.conf: config/picom.conf
+# awesome
+    ~/.config/awesome:
+      create: true
+      path: config/awesome

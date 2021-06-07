@@ -1,0 +1,7 @@
+[user]
+    email = umutoztunc@gmail.com
+    name = Umut Barış Öztunç
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
