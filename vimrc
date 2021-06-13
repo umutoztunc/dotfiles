@@ -79,8 +79,17 @@ autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
 let mapleader="\<Space>"
+" Quick save/quit {{{
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
+" }}}
+
 " Reindent all code, while preserving cursor location
 nnoremap <Leader>= mqHmwgg=G`wzt`q
+
+" Cut/copy/paste for system clipboard {{{
+vnoremap <Leader>d "+d
+vnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+" }}}
