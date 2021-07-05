@@ -125,6 +125,10 @@ alias lta='lt -A'
 alias lat='lta'
 alias objdump='objdump -m intel'
 
+if [ -d ~/.rbenv ]; then
+    eval "$(rbenv init -)"
+fi
+
 if [ -d ~/.pyenv ]; then
     eval "$(pyenv init -)"
 fi
