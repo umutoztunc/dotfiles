@@ -28,3 +28,7 @@
     ~/.config/awesome:
       create: true
       path: config/awesome
+# systemd
+    ~/.config/systemd:
+      create: true
+      path: config/systemd

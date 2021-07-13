@@ -1,0 +1,8 @@
+[Unit]
+Description=Update EasyList and EasyPrivacy.
+
+[Service]
+ExecStart=/usr/bin/curl --remote-name-all --create-dirs \
+    --output-dir %h/.local/share/luakit/adblock \
+    https://easylist.to/easylist/easylist.txt \
+    https://easylist.to/easylist/easyprivacy.txt
