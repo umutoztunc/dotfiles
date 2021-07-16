@@ -20,6 +20,10 @@ Plug 'kelwin/vim-smali'
 Plug 'Yggdroot/indentLine'
 " }}}
 
+" Fast comment {{{
+Plug 'preservim/nerdcommenter'
+" }}}
+
 call plug#end()
 " }}}
 
@@ -44,6 +48,14 @@ let g:airline_theme = 'gruvbox'
 " vim-polyglot {{{
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
+" }}}
+
+" NERDCommenter {{{
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 " }}}
 
 syntax on
