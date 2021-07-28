@@ -119,6 +119,14 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+mkcd() {
+    if [ -n "$1" ]; then
+        mkdir "$@" && cd "$_"
+    else
+        echo "mkcd: missing operand"
+    fi
+}
+
 alias ls='lsd'
 alias lt='ls --tree'
 alias lta='lt -A'
