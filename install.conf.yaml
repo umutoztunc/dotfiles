@@ -20,6 +20,7 @@
     ~/.zprofile: zprofile
 # gdb
     ~/.gdbinit: gdbinit
+    ~/.gdbinit-gef.py: gdbinit-gef.py
 # alacritty
     ~/.alacritty.yml: alacritty.yml
 # picom
