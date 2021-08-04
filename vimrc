@@ -12,8 +12,12 @@ Plug 'morhetz/gruvbox'
 
 " Syntax highlight {{{
 Plug 'sheerun/vim-polyglot'
+
 " Smali syntax highlight
 Plug 'kelwin/vim-smali'
+
+" Log file highlight
+Plug 'mtdl9/vim-log-highlighting'
 " }}}
 
 " Indent line {{{
