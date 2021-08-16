@@ -28,6 +28,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
 " }}}
 
+" File navigator {{{
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" }}}
+
 call plug#end()
 " }}}
 
