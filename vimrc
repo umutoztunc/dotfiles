@@ -99,6 +99,9 @@ autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
+autocmd FileType c,cpp,cc nnoremap <F5> :w <bar> !g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined % -o %:r<CR>
+autocmd FileType c,cpp,cc nnoremap <F9> :w <bar> !g++ -std=c++20 -Wall -Wshadow -O2 % -o %:r<CR>
+
 let mapleader="\<Space>"
 " Quick save/quit {{{
 nnoremap <Leader>w :w<CR>
