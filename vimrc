@@ -33,6 +33,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " }}}
 
+" Autocomplete {{{
+Plug 'ycm-core/youcompleteme'
+" }}}
+
 call plug#end()
 " }}}
 
@@ -65,6 +69,14 @@ let g:NERDSpaceDelims = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation.
 let g:NERDDefaultAlign = 'left'
+" }}}
+
+" YouCompleteMe {{{
+" Disable the check at startup.
+let g:ycm_confirm_extra_conf = 0
+
+" Set the default config file.
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " }}}
 
 syntax on
