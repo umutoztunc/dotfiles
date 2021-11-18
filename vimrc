@@ -38,7 +38,7 @@ call plug#end()
 
 " True colors {{{
 set termguicolors
-" Fix colors on alacritty
+" Fix colors on alacritty.
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " }}}
@@ -60,10 +60,10 @@ let g:vim_markdown_conceal_code_blocks = 0
 " }}}
 
 " NERDCommenter {{{
-" Add spaces after comment delimiters by default
+" Add spaces after comment delimiters by default.
 let g:NERDSpaceDelims = 1
 
-" Align line-wise comment delimiters flush left instead of following code indentation
+" Align line-wise comment delimiters flush left instead of following code indentation.
 let g:NERDDefaultAlign = 'left'
 " }}}
 
@@ -81,7 +81,7 @@ set softtabstop=4
 set expandtab
 
 set mouse=a
-" Fix mouse on alacritty
+" Fix mouse on alacritty.
 set ttymouse=sgr
 
 set incsearch
@@ -109,7 +109,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 " }}}
 
-" Reindent all code, while preserving cursor location
+" Reindent all code, while preserving cursor location.
 nnoremap <Leader>= mqHmwgg=G`wzt`q
 
 " Cut/copy/paste for system clipboard {{{
