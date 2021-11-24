@@ -37,6 +37,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/youcompleteme'
 " }}}
 
+" Async run {{{
+Plug 'skywind3000/asyncrun.vim'
+" }}}
+
 call plug#end()
 " }}}
 
@@ -79,6 +83,12 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " }}}
 
+" AsyncRun {{{
+" Automatically open quickfix window when AsyncRun command is executed.
+" Set the quickfix window 12 lines length.
+let g:asyncrun_open = 12
+" }}}
+
 syntax on
 set number
 set cursorline
@@ -111,8 +121,9 @@ autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
-autocmd FileType c,cpp,cc nnoremap <F5> :w <bar> !g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined % -o %:r<CR>
-autocmd FileType c,cpp,cc nnoremap <F9> :w <bar> !g++ -std=c++20 -Wall -Wshadow -O2 % -o %:r<CR>
+autocmd FileType c,cpp,cc nnoremap <F5> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined % -o %:r<CR>
+autocmd FileType c,cpp,cc nnoremap <F9> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -O2 % -o %:r<CR>
+nnoremap <silent> <F10> :call asyncrun#quickfix_toggle(12)<CR>
 
 let mapleader="\<Space>"
 " Quick save/quit {{{
