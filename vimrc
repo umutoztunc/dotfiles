@@ -34,7 +34,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 
 " Autocomplete {{{
-Plug 'ycm-core/youcompleteme'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.sh' }
 " }}}
 
 " Async run {{{
