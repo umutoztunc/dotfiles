@@ -34,7 +34,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 
 " Autocomplete {{{
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.sh' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --all' }
 " }}}
 
 " Async run {{{
