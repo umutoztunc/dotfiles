@@ -1,1 +1,1 @@
-source ~/.gdbinit-gef.py
+source /usr/share/pwndbg/gdbinit.py
