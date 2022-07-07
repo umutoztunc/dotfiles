@@ -122,7 +122,7 @@ autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
-autocmd FileType c,cpp,cc nnoremap <silent> <F5> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined % -o %:r<CR>
+autocmd FileType c,cpp,cc nnoremap <silent> <F5> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG % -o %:r<CR>
 autocmd FileType c,cpp,cc nnoremap <silent> <F9> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -O2 % -o %:r<CR>
 nnoremap <silent> <F10> :call asyncrun#quickfix_toggle(12)<CR>
 
