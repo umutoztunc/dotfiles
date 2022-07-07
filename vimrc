@@ -79,6 +79,9 @@ let g:NERDDefaultAlign = 'left'
 " Disable the check at startup.
 let g:ycm_confirm_extra_conf = 0
 
+" Set the python interpreter for pyenv.
+let g:ycm_python_interpreter_path = '/home/umutoztunc/.pyenv/shims/python'
+
 " Set the default config file.
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " }}}
