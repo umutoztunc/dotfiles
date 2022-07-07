@@ -91,6 +91,7 @@ let g:asyncrun_open = 12
 
 syntax on
 set number
+set relativenumber
 set cursorline
 set foldmethod=marker
 set wildmenu
