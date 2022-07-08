@@ -15,13 +15,9 @@
     ~/.vim/autoload/plug.vim:
       create: true
       path: modules/vim-plug/plug.vim
-    ~/.ycm_extra_conf.py: ycm_extra_conf.py
 # zsh
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
-# gdb
-    ~/.gdbinit: gdbinit
-    ~/.gdbinit-gef.py: gdbinit-gef.py
 # alacritty
     ~/.alacritty.yml: alacritty.yml
 # picom
