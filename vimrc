@@ -33,8 +33,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " }}}
 
-" Autocomplete {{{
-Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --all' }
+" Language Server {{{
+Plug 'dense-analysis/ale'
 " }}}
 
 " Async run {{{
@@ -75,21 +75,14 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 " }}}
 
-" YouCompleteMe {{{
-" Disable the check at startup.
-let g:ycm_confirm_extra_conf = 0
-
-" Set the python interpreter for pyenv.
-let g:ycm_python_interpreter_path = '/home/umutoztunc/.pyenv/shims/python'
-
-" Set the default config file.
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-" }}}
-
 " AsyncRun {{{
 " Automatically open quickfix window when AsyncRun command is executed.
 " Set the quickfix window 12 lines length.
 let g:asyncrun_open = 12
+" }}}
+
+" Autocomplete {{{
+let g:ale_completion_enabled = 1
 " }}}
 
 syntax on
