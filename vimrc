@@ -34,7 +34,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 
 " Language Server {{{
-Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " }}}
 
 " Async run {{{
@@ -81,8 +81,8 @@ let g:NERDDefaultAlign = 'left'
 let g:asyncrun_open = 12
 " }}}
 
-" Autocomplete {{{
-let g:ale_completion_enabled = 1
+" Language Server {{{
+let g:coc_global_extensions = ['coc-clangd', 'coc-pyright', 'coc-rust-analyzer', 'coc-solargraph']
 " }}}
 
 syntax on
