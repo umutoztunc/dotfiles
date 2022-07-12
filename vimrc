@@ -117,6 +117,9 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set pastetoggle=<F2>
 
+set splitbelow      " new window at bottom
+set splitright      " new window on the right
+
 autocmd FileType Makefile set noexpandtab
 autocmd FileType c,cpp,cc set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
