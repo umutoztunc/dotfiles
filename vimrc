@@ -93,6 +93,7 @@ set foldmethod=marker
 set wildmenu
 
 set linebreak       " don't break at words
+set breakindent     " keep the indent for wrapped lines
 let &showbreak='↪ ' " to be shown at start of wrapped lines
 
 set autoindent
