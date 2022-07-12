@@ -92,6 +92,9 @@ set cursorline
 set foldmethod=marker
 set wildmenu
 
+set linebreak       " don't break at words
+let &showbreak='↪ ' " to be shown at start of wrapped lines
+
 set autoindent
 set tabstop=4
 set shiftwidth=4
