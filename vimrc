@@ -93,11 +93,11 @@ set foldmethod=marker
 set wildmenu
 
 set autoindent
-set smartindent
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smarttab
 
 set mouse=a
 " Fix mouse on alacritty.
@@ -115,7 +115,7 @@ set encoding=utf-8
 set pastetoggle=<F2>
 
 autocmd FileType Makefile set noexpandtab
-autocmd FileType c,cpp,cc set cindent shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType c,cpp,cc set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst set shiftwidth=3 tabstop=3 softtabstop=3
 
 autocmd FileType c,cpp,cc nnoremap <silent> <F5> :AsyncRun -save=1 g++ -std=c++20 -Wall -Wshadow -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG % -o %:r<CR>
