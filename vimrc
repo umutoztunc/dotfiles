@@ -83,6 +83,26 @@ let g:asyncrun_open = 12
 
 " Language Server {{{
 let g:coc_global_extensions = ['coc-clangd', 'coc-pyright', 'coc-rust-analyzer', 'coc-solargraph']
+
+" Use <C-Space> to trigger completion.
+inoremap <silent> <expr> <C-@> coc#refresh()
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
+
+" Show documentation in preview window.
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<CR>
+
+" Navigate diagnostics.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " }}}
 
 syntax on
