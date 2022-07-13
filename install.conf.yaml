@@ -4,26 +4,26 @@
     description: Installing submodules
     stdout: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.vim/autoload']
 
 - link:
 # git
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
+    ~/.gitconfig: config/git/gitconfig
+    ~/.gitignore_global: config/git/gitignore_global
 # vim
-    ~/.vimrc: vimrc
+    ~/.vimrc: config/vim/vimrc
     ~/.vim/autoload/plug.vim:
       create: true
-      path: modules/vim-plug/plug.vim
+      path: config/vim/vim-plug/plug.vim
 # zsh
-    ~/.zshrc: zshrc
-    ~/.zenv: zenv
-# x
-    ~/.xsession: xsession
+    ~/.zshrc: config/zsh/zshrc
+    ~/.zenv: config/zsh/zenv
+# xorg
+    ~/.xprofile: config/xorg/xprofile
 # alacritty
-    ~/.alacritty.yml: alacritty.yml
+    ~/.alacritty.yml: config/alacritty/alacritty.yml
 # picom
-    ~/.config/picom.conf: config/picom.conf
+    ~/.config/picom.conf: config/picom/picom.conf
 # awesome
     ~/.config/awesome:
       create: true
