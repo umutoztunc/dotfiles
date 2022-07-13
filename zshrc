@@ -75,6 +75,7 @@ plugins=(
     ssh-agent
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-autocomplete
 )
 
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
