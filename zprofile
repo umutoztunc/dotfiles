@@ -7,14 +7,4 @@ if [ -f /usr/bin/ruby ]; then
 	export PATH="$PATH:$GEM_HOME/bin"
 fi
 
-if [ -d ~/.rbenv ]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-fi
-
-if [ -d ~/.pyenv ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
-fi
-
 picom -b

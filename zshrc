@@ -135,9 +135,12 @@ alias lat='lta'
 alias objdump='objdump -m intel'
 
 if [ -d ~/.rbenv ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
 fi
 
 if [ -d ~/.pyenv ]; then
-    eval "$(pyenv init -)"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
 fi
