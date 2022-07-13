@@ -17,7 +17,9 @@
       path: modules/vim-plug/plug.vim
 # zsh
     ~/.zshrc: zshrc
-    ~/.zprofile: zprofile
+    ~/.zenv: zenv
+# x
+    ~/.xsession: xsession
 # alacritty
     ~/.alacritty.yml: alacritty.yml
 # picom
