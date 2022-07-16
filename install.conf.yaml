@@ -17,7 +17,7 @@
       path: config/vim/vim-plug/plug.vim
 # zsh
     ~/.zshrc: config/zsh/zshrc
-    ~/.zenv: config/zsh/zenv
+    ~/.zshenv: config/zsh/zshenv
 # xorg
     ~/.xprofile: config/xorg/xprofile
 # alacritty
