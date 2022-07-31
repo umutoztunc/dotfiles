@@ -48,7 +48,10 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 beautiful.wallpaper = awful.util.get_configuration_dir() .. "wallpapers/fireworks.jpg"
 beautiful.useless_gap = 5
+beautiful.font = "Roboto Mono 10"
 beautiful.systray_icon_spacing = 3
+beautiful.border_focus = "#689d6a"
+beautiful.taglist_fg_focus = "#fabd2f"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
