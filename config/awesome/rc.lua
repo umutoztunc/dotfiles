@@ -48,6 +48,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 beautiful.wallpaper = awful.util.get_configuration_dir() .. "wallpapers/fireworks.jpg"
 beautiful.useless_gap = 5
+beautiful.systray_icon_spacing = 3
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -213,7 +214,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            -- mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,

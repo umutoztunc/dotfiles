@@ -18,8 +18,6 @@
 # zsh
     ~/.zshrc: config/zsh/zshrc
     ~/.zshenv: config/zsh/zshenv
-# xorg
-    ~/.xprofile: config/xorg/xprofile
 # alacritty
     ~/.alacritty.yml: config/alacritty/alacritty.yml
 # picom
