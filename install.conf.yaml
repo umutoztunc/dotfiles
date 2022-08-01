@@ -20,8 +20,6 @@
     ~/.zshenv: config/zsh/zshenv
 # alacritty
     ~/.alacritty.yml: config/alacritty/alacritty.yml
-# picom
-    ~/.config/picom.conf: config/picom/picom.conf
 # awesome
     ~/.config/awesome:
       create: true
