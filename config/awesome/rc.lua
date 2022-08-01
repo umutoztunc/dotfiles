@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+awful.spawn.with_shell(awful.util.get_configuration_dir() .. "autostart.sh")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -577,7 +579,6 @@ client.connect_signal("unfocus", function(c)
     c.opacity = 0.9
 end)
 
-
 -- Hide titlebars for non-floating windows {{{
 local set_titlebar = function (c)
   if c.floating and not (c.requests_no_titlebar or c.fullscreen) then
@@ -588,9 +589,7 @@ local set_titlebar = function (c)
 end
 
 client.connect_signal("manage", set_titlebar)
-
 client.connect_signal("property::floating", set_titlebar)
-
 tag.connect_signal("property::layout", function(t)
     local clients = t:clients()
     for _, c in pairs(clients) do
