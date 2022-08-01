@@ -576,25 +576,26 @@ client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
     c.opacity = 0.9
 end)
--- }}}
 
--- Hide titlebar if the client is floating. Always hide it for Alacritty. {{{
-client.connect_signal("manage", function(c)
-    if c.class ~= "Alacritty" and (c.floating or c.first_tag.layout.name == "floating") then
-        awful.titlebar.show(c)
-    else
-        awful.titlebar.hide(c)
-    end
-end)
+
+-- Hide titlebars for non-floating windows {{{
+local set_titlebar = function (c)
+  if c.floating and not (c.requests_no_titlebar or c.fullscreen) then
+    awful.titlebar.show(c)
+  else
+    awful.titlebar.hide(c)
+  end
+end
+
+client.connect_signal("manage", set_titlebar)
+
+client.connect_signal("property::floating", set_titlebar)
 
 tag.connect_signal("property::layout", function(t)
     local clients = t:clients()
-    for k, c in pairs(clients) do
-        if c.class ~= "Alacritty" and (c.floating or c.first_tag.layout.name == "floating") then
-            awful.titlebar.show(c)
-        else
-            awful.titlebar.hide(c)
-        end
+    for _, c in pairs(clients) do
+        set_titlebar(c)
     end
 end)
+-- }}}
 -- }}}
