@@ -15,6 +15,10 @@
     ~/.vim/autoload/plug.vim:
       create: true
       path: config/vim/vim-plug/plug.vim
+# neovim
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
 # zsh
     ~/.zshrc: config/zsh/zshrc
     ~/.zshenv: config/zsh/zshenv
