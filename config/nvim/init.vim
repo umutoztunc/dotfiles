@@ -23,8 +23,8 @@ set splitbelow
 set splitright
 
 set termguicolors
-colorscheme catppuccin-frappe
 let g:airline_theme = "catppuccin"
+colorscheme catppuccin-macchiato
 
 let mapleader="\<Space>"
 
